@@ -24,3 +24,8 @@ spring:
   thymeleaf:
     cache: true #enable templates cache
     check-template-location: true # check that the templates location exist
+    content-type: text/html #Content-Type value
+    enabled:  # Enable MVC Thymeleaf view resolution
+    encoding: UTF-8 #Template encoding
+    mode: HTML5 # Template mode to be applied to templates. See also StandardTemplateModeHandlers
+    suffix: .html
