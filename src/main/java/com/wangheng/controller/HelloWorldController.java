@@ -1,5 +1,6 @@
 package com.wangheng.controller;
 
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,5 +15,12 @@ public class HelloWorldController {
 	@RequestMapping("/hi")
 	public String seyHi() {
 		return "hi!";
+	}
+
+
+	@RequestMapping("/index")
+	public String testHtml(ModelMap map){
+		map.addAttribute("host","https://www.baidu.com");
+		return "index";
 	}
 }

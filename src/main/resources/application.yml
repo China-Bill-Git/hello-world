@@ -1,2 +1,26 @@
+
 server:
   port: 8099
+
+
+#启动环境配置
+spring:
+  profiles:
+    active: dev
+
+# 参数配置
+com:
+  wangheng:
+    name: 王恒
+    sex: 男
+    desc: ${com.wangheng.name}是个大帅哥
+    #随机字符串
+    value: ${random.value}
+
+
+
+# thymelate配置
+spring:
+  thymeleaf:
+    cache: true #enable templates cache
+    check-template-location: true # check that the templates location exist
