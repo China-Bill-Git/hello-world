@@ -29,3 +29,4 @@ spring:
     encoding: UTF-8 #Template encoding
     mode: HTML5 # Template mode to be applied to templates. See also StandardTemplateModeHandlers
     suffix: .html
+    prefix: classpath:/templates/
