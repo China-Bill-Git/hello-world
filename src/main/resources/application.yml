@@ -1,12 +1,20 @@
-
 server:
   port: 8099
-
 
 #启动环境配置
 spring:
   profiles:
     active: dev
+  # thymelate配置
+  thymeleaf:
+    cache: true #enable templates cache
+    check-template-location: false # check that the templates location exist
+    content-type: text/html #Content-Type value
+    enabled: true  # Enable MVC Thymeleaf view resolution
+    encoding: UTF-8 #Template encoding
+    mode: HTML5 # Template mode to be applied to templates. See also StandardTemplateModeHandlers
+    suffix: .html
+    prefix: classpath:/templates/
 
 # 参数配置
 com:
@@ -16,17 +24,3 @@ com:
     desc: ${com.wangheng.name}是个大帅哥
     #随机字符串
     value: ${random.value}
-
-
-
-# thymelate配置
-spring:
-  thymeleaf:
-    cache: true #enable templates cache
-    check-template-location: true # check that the templates location exist
-    content-type: text/html #Content-Type value
-    enabled:  # Enable MVC Thymeleaf view resolution
-    encoding: UTF-8 #Template encoding
-    mode: HTML5 # Template mode to be applied to templates. See also StandardTemplateModeHandlers
-    suffix: .html
-    prefix: classpath:/templates/
