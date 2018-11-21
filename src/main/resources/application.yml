@@ -16,6 +16,14 @@ spring:
     suffix: .html
     prefix: classpath:/templates/
 
+  #druid连接
+  datasource:
+    druid:
+      url: jdbc:mysql://192.168.109.128:3306/platform
+      username: root
+      password: 111111
+      driver-class-name:
+
 # 参数配置
 com:
   wangheng:
