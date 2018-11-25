@@ -19,10 +19,16 @@ spring:
   #druid连接
   datasource:
     druid:
-      url: jdbc:mysql://192.168.109.128:3306/platform
+      #JDBC配置
+      url: jdbc:mysql://192.168.109.128:3306/autoplatform
       username: root
       password: 111111
-      driver-class-name:
+      #driver-class-name: com.mysql.jdbc.Driver  #mysql
+      #连接池配置
+      initial-size: 2 #初始化连接的时候，创建的物理连接数
+      max-active: 8 #最大连接池数量
+      min-idle: 2 #最小连接池数量
+      max-wait: 2000 #获取连接的时候最大等待时间
 
 # 参数配置
 com:
