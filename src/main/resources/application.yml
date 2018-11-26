@@ -30,6 +30,10 @@ spring:
       min-idle: 2 #最小连接池数量
       max-wait: 2000 #获取连接的时候最大等待时间
 
+#mybatis配置
+mybatis:
+  config-location: classpath:mybatis-config.xml
+
 # 参数配置
 com:
   wangheng:
